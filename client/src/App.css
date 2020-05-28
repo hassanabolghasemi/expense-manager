@@ -1,0 +1,275 @@
+@font-face {
+  font-family: 'Vazir';
+  src: url('./assets/fonts/Vazir-FD-WOL.eot');
+  src: url('./assets/fonts/Vazir-FD-WOL.eot?#iefix') format('embedded-opentype'),
+    url('./assets/fonts/Vazir-FD-WOL.woff2') format('woff2'),
+    url('./assets/fonts/Vazir-FD-WOL.woff') format('woff'),
+    url('./assets/fonts/Vazir-FD-WOL.ttf') format('truetype');
+}
+
+:root {
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+* {
+  direction: rtl;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Vazir';
+  font-size: 16px;
+  background-color: #f7f7f7;
+}
+
+.header {
+  width: 100%;
+  padding: 20px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  width: 99%;
+  margin: 0 auto;
+}
+
+.show-trans {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.add-mobile {
+  display: none;
+  position: fixed;
+  bottom: 8px;
+  right: 8px;
+  color: #ffffff;
+  background-color: #9c88ff;
+  font-size: 25px;
+  padding: 8px 16px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  width: 99%;
+  height: 90px;
+  background-color: #ffffff;
+  box-shadow: var(--box-shadow);
+  margin: 0 auto;
+  padding: 10px;
+  z-index: 9999;
+}
+
+.balance {
+  text-align: center;
+}
+
+.inc-exp {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inc-exp > div {
+  flex: 1;
+  text-align: center;
+  border-right: 1px solid #dedede;
+}
+
+.money {
+  font-size: 20px;
+  margin: 5px 0;
+}
+
+.money.plus {
+  color: #2ecc71;
+}
+
+.money.minus {
+  color: #c0392b;
+}
+
+.add-trans {
+  position: relative;
+}
+
+.add-trans h3 {
+  border-bottom: 1px solid #bbbbbb;
+  padding-bottom: 10px;
+  margin: 20px 20px 5px 0;
+  width: 60px !important;
+}
+
+.exit-add-form {
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  border: 0;
+  color: #e74c3c;
+  background-color: #f7f7f7;
+  font-size: 25px;
+  display: none;
+}
+
+.history {
+  height: 76.7vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.trans-list {
+  overflow: auto;
+}
+
+.history h3 {
+  border-bottom: 1px solid #bbbbbb;
+  padding-bottom: 10px;
+  margin: 30px 20px 10px 0;
+  width: 60px !important;
+}
+
+label {
+  display: inline-block;
+  margin: 10px 15px;
+}
+
+input[type='text'],
+input[type='number'] {
+  border: 1px solid #dedede;
+  border-radius: 4px;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.inc-exp-toolbar {
+  margin: 10px auto;
+  width: 231px;
+}
+
+.inc-exp-toolbar input[type='radio'] {
+  opacity: 0;
+  width: 0;
+}
+
+.inc-exp-toolbar label {
+  cursor: pointer;
+  display: inline-block;
+  color: #ffffff;
+  padding: 10px 35px;
+  margin: 15px 0 0;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.inc-exp-toolbar input[type='radio'] + .inc-label {
+  margin-left: 14px;
+  background-color: #8dedb7;
+  border: 2px solid #8dedb7;
+}
+
+.inc-exp-toolbar input[type='radio'] + .exp-label {
+  background-color: #eea7a0;
+  border: 2px solid #eea7a0;
+}
+
+.inc-exp-toolbar input[type='radio']:checked + .inc-label {
+  background-color: #68d395;
+  border: 2px solid #1ab85c;
+}
+
+.inc-exp-toolbar input[type='radio']:checked + .exp-label {
+  background-color: #d5877e;
+  border: 2px solid #c0392b;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: #9c88ff;
+  box-shadow: var(--box-shadow);
+  color: #fff;
+  border: 0;
+  border-radius: 4px;
+  display: block;
+  font-size: 14px;
+  padding: 10px;
+  width: 95%;
+  margin: 30px auto;
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+  width: 95%;
+  margin: 10px auto;
+}
+
+.list li {
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.list li.plus {
+  border-right: 5px solid #2ecc71;
+}
+
+.list li.minus {
+  border-right: 5px solid #c0392b;
+}
+
+.delete-btn {
+  cursor: pointer;
+  background-color: #ffffff;
+  border: 0;
+  color: #e74c3c;
+  font-size: 20px;
+}
+
+.disp-block {
+  display: block !important;
+}
+
+.disp-none {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .container {
+    display: block;
+  }
+  .add-trans {
+    display: none;
+  }
+  .add-mobile {
+    display: block;
+  }
+  .exit-add-form {
+    display: block;
+  }
+}
+
+@media (min-width: 769px) {
+  .show-trans {
+    display: block !important;
+  }
+}
