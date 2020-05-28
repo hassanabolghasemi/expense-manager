@@ -18,5 +18,17 @@
   "bugs": {
     "url": "https://github.com/hassanabolghasemi/expense-manager/issues"
   },
-  "homepage": "https://github.com/hassanabolghasemi/expense-manager#readme"
+  "homepage": "https://github.com/hassanabolghasemi/expense-manager#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.16",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "nodemon": "^2.0.4"
+  }
 }
